@@ -12,3 +12,4 @@ C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\refint
 C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\Design Patterns.pdb
 C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\Design Patterns.genruntimeconfig.cache
 C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\ref\Design Patterns.dll
+C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\Design Patterns.sourcelink.json
