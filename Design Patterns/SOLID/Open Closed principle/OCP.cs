@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SingleResponsibilityPrinciple;
 
+// open for extension closed for modification
 namespace OpenClosedprinciple
 {
     public interface ISpecification<T>
