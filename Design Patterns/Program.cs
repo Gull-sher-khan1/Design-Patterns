@@ -20,7 +20,8 @@
 //}
 //--------------------------------------------------------------
 // To stop the console from closing.
-using LiskovSubstitutionPrinciple;
-Cat t = new Tiger();
-t.MakeSound();
+//using LiskovSubstitutionPrinciple;
+//Cat t = new Tiger();
+//t.MakeSound();
+//--------------------------------------------------------------
 Console.ReadKey();
