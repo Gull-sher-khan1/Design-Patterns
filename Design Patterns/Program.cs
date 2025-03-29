@@ -24,4 +24,8 @@
 //Cat t = new Tiger();
 //t.MakeSound();
 //--------------------------------------------------------------
+//using DependencyInversionPrinciple;
+//var notification = new Notification(new EmailService());
+//notification.SendNotification("body");
+//--------------------------------------------------------------
 Console.ReadKey();
