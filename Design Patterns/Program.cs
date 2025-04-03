@@ -28,7 +28,8 @@
 //var notification = new Notification(new EmailService());
 //notification.SendNotification("body");
 //--------------------------------------------------------------
-using Builder;
-var builder = new PersonBuilder();
-var emp = builder.Create().AssignedAt(PositionLevel.Junior).HasSalary(25000).Build();
+//using Builder;
+//var builder = new PersonBuilder();
+//var emp = builder.Create().AssignedAt(PositionLevel.Junior).HasSalary(25000).Build();
+//--------------------------------------------------------------
 Console.ReadKey();
