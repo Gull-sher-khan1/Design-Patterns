@@ -33,6 +33,6 @@
 //var emp = builder.Create().AssignedAt(PositionLevel.Junior).HasSalary(25000).Build();
 //--------------------------------------------------------------
 using Factory;
-Console.WriteLine(PointFactory.CartesianPoint(1, 2));
-Console.WriteLine(PointFactory.PolarPoint(1, 2));
+Console.WriteLine(Point.Factory.CartesianPoint(1, 2));
+Console.WriteLine(Point.Factory.PolarPoint(1, 2));
 Console.ReadKey();
