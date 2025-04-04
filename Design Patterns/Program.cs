@@ -32,7 +32,16 @@
 //var builder = new PersonBuilder();
 //var emp = builder.Create().AssignedAt(PositionLevel.Junior).HasSalary(25000).Build();
 //--------------------------------------------------------------
-using Factory;
-Console.WriteLine(Point.Factory.CartesianPoint(1, 2));
-Console.WriteLine(Point.Factory.PolarPoint(1, 2));
+//using Factory;
+//Console.WriteLine(Point.Factory.CartesianPoint(1, 2));
+//Console.WriteLine(Point.Factory.PolarPoint(1, 2));
+//--------------------------------------------------------------
+using Prototype;
+
+var alex = new Person("Alex", "Smith", new Address(123, "oxford street"));
+var bob = alex.DeepCopy();
+bob.Names[0] = "Bob";
+bob.Address.HouseNumber = 321;
+Console.WriteLine(alex);
+Console.WriteLine(bob);
 Console.ReadKey();
