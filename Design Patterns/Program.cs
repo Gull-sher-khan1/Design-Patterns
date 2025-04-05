@@ -46,12 +46,22 @@
 //Console.WriteLine(bob);
 //--------------------------------------------------------------
 
-using Adapter;
-var cylinder = new Cylinder(4, 4);
-var hole = new Hole(4);
-var sp1 = new SquarePrismAdapter(new SquarePrism(4,4));
-var sp2 = new SquarePrismAdapter(new SquarePrism(9, 12));
-Console.WriteLine(hole.fits(cylinder));
-Console.WriteLine(hole.fits(sp1));
-Console.WriteLine(hole.fits(sp2));
+//using Adapter;
+//var cylinder = new Cylinder(4, 4);
+//var hole = new Hole(4);
+//var sp1 = new SquarePrismAdapter(new SquarePrism(4,4));
+//var sp2 = new SquarePrismAdapter(new SquarePrism(9, 12));
+//Console.WriteLine(hole.fits(cylinder));
+//Console.WriteLine(hole.fits(sp1));
+//Console.WriteLine(hole.fits(sp2));
+
+//--------------------------------------------------------------
+using Bridge;
+var remote = new Remote(new TV(10));
+remote.DecreaseVolume();
+Console.WriteLine(((TV)remote.MyDevice).Volume);
+remote = new Remote(new Radio(10));
+remote.IncreaseVolume();
+Console.WriteLine(((Radio)remote.MyDevice).Volume);
+//--------------------------------------------------------------
 Console.ReadKey();
