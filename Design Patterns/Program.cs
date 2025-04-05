@@ -36,12 +36,22 @@
 //Console.WriteLine(Point.Factory.CartesianPoint(1, 2));
 //Console.WriteLine(Point.Factory.PolarPoint(1, 2));
 //--------------------------------------------------------------
-using Prototype;
+//using Prototype;
 
-var alex = new Person("Alex", "Smith", new Address(123, "oxford street"));
-var bob = alex.DeepCopy();
-bob.Names[0] = "Bob";
-bob.Address.HouseNumber = 321;
-Console.WriteLine(alex);
-Console.WriteLine(bob);
+//var alex = new Person("Alex", "Smith", new Address(123, "oxford street"));
+//var bob = alex.DeepCopy();
+//bob.Names[0] = "Bob";
+//bob.Address.HouseNumber = 321;
+//Console.WriteLine(alex);
+//Console.WriteLine(bob);
+//--------------------------------------------------------------
+
+using Adapter;
+var cylinder = new Cylinder(4, 4);
+var hole = new Hole(4);
+var sp1 = new SquarePrismAdapter(new SquarePrism(4,4));
+var sp2 = new SquarePrismAdapter(new SquarePrism(9, 12));
+Console.WriteLine(hole.fits(cylinder));
+Console.WriteLine(hole.fits(sp1));
+Console.WriteLine(hole.fits(sp2));
 Console.ReadKey();
