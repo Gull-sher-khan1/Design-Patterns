@@ -56,12 +56,22 @@
 //Console.WriteLine(hole.fits(sp2));
 
 //--------------------------------------------------------------
-using Bridge;
-var remote = new Remote(new TV(10));
-remote.DecreaseVolume();
-Console.WriteLine(((TV)remote.MyDevice).Volume);
-remote = new Remote(new Radio(10));
-remote.IncreaseVolume();
-Console.WriteLine(((Radio)remote.MyDevice).Volume);
+//using Bridge;
+//var remote = new Remote(new TV(10));
+//remote.DecreaseVolume();
+//Console.WriteLine(((TV)remote.MyDevice).Volume);
+//remote = new Remote(new Radio(10));
+//remote.IncreaseVolume();
+//Console.WriteLine(((Radio)remote.MyDevice).Volume);
+//--------------------------------------------------------------
+
+using Singleton;
+
+var g1 = Government.GetInstance("abc");
+var g2 = Government.GetInstance("def");
+var g3 = Government.GetInstance("ghi");
+Console.WriteLine(g1.getName());
+Console.WriteLine(g2.getName());
+Console.WriteLine(g3.getName());
 //--------------------------------------------------------------
 Console.ReadKey();
