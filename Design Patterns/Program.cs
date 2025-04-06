@@ -65,13 +65,26 @@
 //Console.WriteLine(((Radio)remote.MyDevice).Volume);
 //--------------------------------------------------------------
 
-using Singleton;
+//using Singleton;
 
-var g1 = Government.GetInstance("abc");
-var g2 = Government.GetInstance("def");
-var g3 = Government.GetInstance("ghi");
-Console.WriteLine(g1.getName());
-Console.WriteLine(g2.getName());
-Console.WriteLine(g3.getName());
+//var g1 = Government.GetInstance("abc");
+//var g2 = Government.GetInstance("def");
+//var g3 = Government.GetInstance("ghi");
+//Console.WriteLine(g1.getName());
+//Console.WriteLine(g2.getName());
+//Console.WriteLine(g3.getName());
 //--------------------------------------------------------------
+using Composite;
+var box = new Box(new List<Product>()
+{
+    new Box(new List<Product>()
+    {
+        new Book(10),
+        new Book(20),
+        new Book(30)
+    }),
+    new Book(40)
+});
+Console.WriteLine(box.GetPrice());
+
 Console.ReadKey();
