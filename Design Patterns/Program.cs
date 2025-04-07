@@ -74,17 +74,23 @@
 //Console.WriteLine(g2.getName());
 //Console.WriteLine(g3.getName());
 //--------------------------------------------------------------
-using Composite;
-var box = new Box(new List<Product>()
-{
-    new Box(new List<Product>()
-    {
-        new Book(10),
-        new Book(20),
-        new Book(30)
-    }),
-    new Book(40)
-});
-Console.WriteLine(box.GetPrice());
+//using Composite;
+//var box = new Box(new List<Product>()
+//{
+//    new Box(new List<Product>()
+//    {
+//        new Book(10),
+//        new Book(20),
+//        new Book(30)
+//    }),
+//    new Book(40)
+//});
+//Console.WriteLine(box.GetPrice());
+//--------------------------------------------------------------
+using Decorator;
+var d1 = new DecoratorA(new ConcreteComponent());
+Console.WriteLine(d1.Operation());
+d1 = new DecoratorA(null);
+Console.WriteLine(d1.Operation());
 
 Console.ReadKey();
