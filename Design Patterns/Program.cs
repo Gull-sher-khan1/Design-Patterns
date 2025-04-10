@@ -87,10 +87,16 @@
 //});
 //Console.WriteLine(box.GetPrice());
 //--------------------------------------------------------------
-using Decorator;
-var d1 = new DecoratorA(new ConcreteComponent());
-Console.WriteLine(d1.Operation());
-d1 = new DecoratorA(null);
-Console.WriteLine(d1.Operation());
+//using Decorator;
+//var d1 = new DecoratorA(new ConcreteComponent());
+//Console.WriteLine(d1.Operation());
+//d1 = new DecoratorA(null);
+//Console.WriteLine(d1.Operation());
+//--------------------------------------------------------------
+using Facade;
+var facade = new NotifierFacade(new Message("Me", "You", "Body", "Title"));
+facade.NotifyBy("email");
+facade.NotifyBy("sms");
+facade.NotifyBy("app");
 
 Console.ReadKey();
