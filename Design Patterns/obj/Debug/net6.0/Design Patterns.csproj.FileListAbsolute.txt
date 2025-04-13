@@ -13,3 +13,6 @@ C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\Design
 C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\Design Patterns.genruntimeconfig.cache
 C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\ref\Design Patterns.dll
 C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\Design Patterns.sourcelink.json
+C:\Users\hp\source\repos\Design-Patterns\Design Patterns\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\Design Patterns.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\Design-Patterns\Design Patterns\obj\Debug\net6.0\Design P.913F8501.Up2Date

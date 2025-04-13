@@ -99,9 +99,19 @@
 //facade.NotifyBy("sms");
 //facade.NotifyBy("app");
 //--------------------------------------------------------------
-using Proxy;
+//using Proxy;
 
-var client = new Client();
-client.Operate();
+//var client = new Client();
+//client.Operate();
+//--------------------------------------------------------------
+using Flyweight;
+var factory = new FlyweightFactory(
+    new Tree {Type = "Oak", Color = "Black" },
+    new Tree { Type = "Pine", Color = "Green" },
+    new Tree { Type = "Oak", Color = "Black" },
+    new Tree { Type = "Maple", Color = "Red" },
+    new Tree { Type = "Maple", Color = "Orange" },
+    new Tree { Type = "Pine", Color = "Green" });
+factory.GetAllFlyweights();
 
 Console.ReadKey();
