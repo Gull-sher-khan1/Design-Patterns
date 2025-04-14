@@ -104,14 +104,26 @@
 //var client = new Client();
 //client.Operate();
 //--------------------------------------------------------------
-using Flyweight;
-var factory = new FlyweightFactory(
-    new Tree {Type = "Oak", Color = "Black" },
-    new Tree { Type = "Pine", Color = "Green" },
-    new Tree { Type = "Oak", Color = "Black" },
-    new Tree { Type = "Maple", Color = "Red" },
-    new Tree { Type = "Maple", Color = "Orange" },
-    new Tree { Type = "Pine", Color = "Green" });
-factory.GetAllFlyweights();
+//using Flyweight;
+//var factory = new FlyweightFactory(
+//    new Tree {Type = "Oak", Color = "Black" },
+//    new Tree { Type = "Pine", Color = "Green" },
+//    new Tree { Type = "Oak", Color = "Black" },
+//    new Tree { Type = "Maple", Color = "Red" },
+//    new Tree { Type = "Maple", Color = "Orange" },
+//    new Tree { Type = "Pine", Color = "Green" });
+//factory.GetAllFlyweights();
+//--------------------------------------------------------------
+using ChainOfResponsibility;
+var square = new SquareHoleHandler();
+var circle = new CircleHoleHandler();
+var triangle = new TriangleHoleHandler();
+square.SetNext(circle).SetNext(triangle);
+var objs = new List<string> { "circle", "square", "cone", "triangle" };
+foreach (var obj in objs)
+{
+    Console.WriteLine($"Next Object: {obj}");
+    Console.WriteLine(square.Execute(obj));
+}
 
 Console.ReadKey();
