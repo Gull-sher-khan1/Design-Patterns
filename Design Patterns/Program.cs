@@ -114,16 +114,22 @@
 //    new Tree { Type = "Pine", Color = "Green" });
 //factory.GetAllFlyweights();
 //--------------------------------------------------------------
-using ChainOfResponsibility;
-var square = new SquareHoleHandler();
-var circle = new CircleHoleHandler();
-var triangle = new TriangleHoleHandler();
-square.SetNext(circle).SetNext(triangle);
-var objs = new List<string> { "circle", "square", "cone", "triangle" };
-foreach (var obj in objs)
-{
-    Console.WriteLine($"Next Object: {obj}");
-    Console.WriteLine(square.Execute(obj));
-}
+//using ChainOfResponsibility;
+//var square = new SquareHoleHandler();
+//var circle = new CircleHoleHandler();
+//var triangle = new TriangleHoleHandler();
+//square.SetNext(circle).SetNext(triangle);
+//var objs = new List<string> { "circle", "square", "cone", "triangle" };
+//foreach (var obj in objs)
+//{
+//    Console.WriteLine($"Next Object: {obj}");
+//    Console.WriteLine(square.Execute(obj));
+//}
+//--------------------------------------------------------------
+using Command;
+var invoker = new Invoker(new PrintCommand("printing"));
+invoker.ExecuteCommand();
+invoker = new Invoker(new AddCommand(new Reciever(), 1, 2));
+invoker.ExecuteCommand();
 
 Console.ReadKey();
