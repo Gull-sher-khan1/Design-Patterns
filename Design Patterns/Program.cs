@@ -132,16 +132,23 @@
 //invoker = new Invoker(new AddCommand(new Reciever(), 1, 2));
 //invoker.ExecuteCommand();
 //--------------------------------------------------------------
-using Iterator;
-var collection = new StringCollection();
-collection.AddItem("item1");
-collection.AddItem("item2");
-collection.AddItem("item3");
-var iterator = collection.GetEnumerator();
-iterator.MoveNext();
-Console.WriteLine((string) iterator.Current);
-iterator.MoveNext();
-iterator.MoveNext();
-iterator.MoveNext();
-Console.WriteLine((string)iterator.Current);
+//using Iterator;
+//var collection = new StringCollection();
+//collection.AddItem("item1");
+//collection.AddItem("item2");
+//collection.AddItem("item3");
+//var iterator = collection.GetEnumerator();
+//iterator.MoveNext();
+//Console.WriteLine((string) iterator.Current);
+//iterator.MoveNext();
+//iterator.MoveNext();
+//iterator.MoveNext();
+//Console.WriteLine((string)iterator.Current);
+//---------------------------------------------------------------
+using Mediator;
+var c1 = new ConcreteComponent1();
+var c2 = new ConcreteComponent2();
+var mediator = new ConcreteMediator(c1, c2);
+c1.DoA();
+c2.DoD();
 Console.ReadKey();
