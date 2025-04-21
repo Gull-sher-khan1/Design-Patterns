@@ -145,10 +145,18 @@
 //iterator.MoveNext();
 //Console.WriteLine((string)iterator.Current);
 //---------------------------------------------------------------
-using Mediator;
-var c1 = new ConcreteComponent1();
-var c2 = new ConcreteComponent2();
-var mediator = new ConcreteMediator(c1, c2);
-c1.DoA();
-c2.DoD();
+//using Mediator;
+//var c1 = new ConcreteComponent1();
+//var c2 = new ConcreteComponent2();
+//var mediator = new ConcreteMediator(c1, c2);
+//c1.DoA();
+//c2.DoD();
+//---------------------------------------------------------------
+using Visitor;
+var cart = new ShoppingCart(
+    new EducationBook("A", 0.5),
+    new EducationBook("B", 2),
+    new FantasyBook("C", 2),
+    new FantasyBook("D", 0.8));
+Console.WriteLine(cart.CalculateTotal(new CartVisitor()));
 Console.ReadKey();
