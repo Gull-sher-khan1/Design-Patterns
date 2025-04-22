@@ -152,11 +152,15 @@
 //c1.DoA();
 //c2.DoD();
 //---------------------------------------------------------------
-using Visitor;
-var cart = new ShoppingCart(
-    new EducationBook("A", 0.5),
-    new EducationBook("B", 2),
-    new FantasyBook("C", 2),
-    new FantasyBook("D", 0.8));
-Console.WriteLine(cart.CalculateTotal(new CartVisitor()));
+//using Visitor;
+//var cart = new ShoppingCart(
+//    new EducationBook("A", 0.5),
+//    new EducationBook("B", 2),
+//    new FantasyBook("C", 2),
+//    new FantasyBook("D", 0.8));
+//Console.WriteLine(cart.CalculateTotal(new CartVisitor()));
+//---------------------------------------------------------------
+using Template_Method;
+Client.Execute(new ClassA());
+Client.Execute(new ClassB());
 Console.ReadKey();
