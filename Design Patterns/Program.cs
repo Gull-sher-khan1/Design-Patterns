@@ -160,7 +160,13 @@
 //    new FantasyBook("D", 0.8));
 //Console.WriteLine(cart.CalculateTotal(new CartVisitor()));
 //---------------------------------------------------------------
-using Template_Method;
-Client.Execute(new ClassA());
-Client.Execute(new ClassB());
+//using Template_Method;
+//Client.Execute(new ClassA());
+//Client.Execute(new ClassB());
+//--------------------------------------------------------------
+using Strategy;
+var c1 = new Context(new AdditionStrategy());
+var c2 = new Context(new SubtractionStrategy());
+Console.WriteLine(c1.ExecuteStrategy(1,2));
+Console.WriteLine(c2.ExecuteStrategy(1, 2));
 Console.ReadKey();
