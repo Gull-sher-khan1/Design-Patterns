@@ -164,9 +164,17 @@
 //Client.Execute(new ClassA());
 //Client.Execute(new ClassB());
 //--------------------------------------------------------------
-using Strategy;
-var c1 = new Context(new AdditionStrategy());
-var c2 = new Context(new SubtractionStrategy());
-Console.WriteLine(c1.ExecuteStrategy(1,2));
-Console.WriteLine(c2.ExecuteStrategy(1, 2));
+//using Strategy;
+//var c1 = new Context(new AdditionStrategy());
+//var c2 = new Context(new SubtractionStrategy());
+//Console.WriteLine(c1.ExecuteStrategy(1,2));
+//Console.WriteLine(c2.ExecuteStrategy(1, 2));
+//--------------------------------------------------------------
+using State;
+
+var context = new Context(new State1());
+context.Request2();
+context.Request1();
+context.Request1();
+context.Request2();
 Console.ReadKey();
