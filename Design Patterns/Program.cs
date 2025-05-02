@@ -170,11 +170,28 @@
 //Console.WriteLine(c1.ExecuteStrategy(1,2));
 //Console.WriteLine(c2.ExecuteStrategy(1, 2));
 //--------------------------------------------------------------
-using State;
+//using State;
 
-var context = new Context(new State1());
-context.Request2();
-context.Request1();
-context.Request1();
-context.Request2();
+//var context = new Context(new State1());
+//context.Request2();
+//context.Request1();
+//context.Request1();
+//context.Request2();
+//-------------------------------------------------------------
+using Obserer;
+
+var obsA = new ObserverA();
+var obsB = new ObserverB();
+var subject = new Subject();
+subject.Subscribe(obsA);
+subject.Subscribe(obsB);
+subject.changeState();
+subject.changeState();
+subject.changeState();
+subject.Unsubscribe(obsB);
+subject.changeState();
+subject.changeState();
+subject.changeState();
+
+subject.changeState();
 Console.ReadKey();
